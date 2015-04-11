@@ -1,0 +1,19 @@
+LOG:  database system was shut down at 2015-04-05 22:13:38 CLST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2015-04-11 13:40:16 CLST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
