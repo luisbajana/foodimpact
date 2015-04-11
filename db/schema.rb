@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150411192815) do
+ActiveRecord::Schema.define(:version => 20150411194323) do
 
   create_table "foods", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20150411192815) do
     t.datetime "updated_at",        :null => false
     t.float    "sustainability"
     t.string   "country"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
