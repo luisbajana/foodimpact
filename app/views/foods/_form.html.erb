@@ -34,7 +34,10 @@
     <%= f.label :quantity_consumed %><br />
     <%= f.text_field :quantity_consumed, :class=>"form-control" %>
   </div>
+
+  <%= f.hidden_field :country  %>
+
   <div class="form-group">
-    <%= f.submit :class=>"btn btn-success" %>
+    <%= f.submit :class=>"btn btn-success", :id=>"create_food_data" %>
   </div>
 <% end %>
