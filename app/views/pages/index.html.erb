@@ -1,0 +1,21 @@
+<h1>Food Impact</h1>
+
+
+<% if current_user %>
+	<div class="col-md-1">
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <div class="text-center"><i class="icon-key"></i></div>
+      <div class="text-center">Log Out</div>
+    <% end %>
+  </div>
+
+<% else %>
+	
+	<%= link_to '/users/sign_in' do %>
+      <div class="text-center"><i class="icon-key"></i></div>
+      <div class="text-center">Log In</div>
+    <% end %>
+
+<% end %>
+
+<p>Find me in app/views/pages/index.html.erb</p>

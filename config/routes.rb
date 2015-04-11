@@ -1,4 +1,17 @@
 Foodimpact::Application.routes.draw do
+  resources :foods
+
+
+  get "pages/index"
+
+  get "pages/info"
+
+  get "pages/team"
+
+  devise_for :users
+
+  root :to => 'pages#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

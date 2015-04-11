@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @food.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @food.category %>
+</p>
+
+
+<p>
+  <b>Address:</b>
+  <%= @food.address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @food.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @food.longitude %>
+</p>
+
+<p>
+  <b>Quantity produced:</b>
+  <%= @food.quantity_produced %>
+</p>
+
+<p>
+  <b>Quantity consumed:</b>
+  <%= @food.quantity_consumed %>
+</p>
+
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>
