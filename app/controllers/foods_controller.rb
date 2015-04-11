@@ -1,6 +1,9 @@
 class FoodsController < ApplicationController
   # GET /foods
   # GET /foods.json
+
+  before_filter :auth_user, :except => [:index]
+
   def index
     @foods = Food.all
 
@@ -42,6 +45,7 @@ class FoodsController < ApplicationController
   def create
     @food = Food.new(params[:food])
     @food.sustainability = @food.quantity_produced - @food.quantity_consumed
+    @food.user_id = current_user.id
 
     respond_to do |format|
       if @food.save
