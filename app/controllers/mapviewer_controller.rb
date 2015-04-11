@@ -6,7 +6,10 @@ class MapviewerController < ApplicationController
 hash = { a: true, b: false, c: nil}
 
 
-h1 = {'h2.1' => {'foo' => 'this', 'cool' => 'guy'}, 'h2.2' => {'bar' => '2000'} }
+h1 = {'Germany' => {'foo' => 'this', 'cool' => 'guy'}, 
+'h2.2' => {'bar' => '2000'} 
+
+}
 
 
 
