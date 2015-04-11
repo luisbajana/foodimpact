@@ -1,6 +1,9 @@
 class FoodsController < ApplicationController
   # GET /foods
   # GET /foods.json
+
+  before_filter :auth_user, :except => [:index]
+
   def index
     @foods = Food.all
 
