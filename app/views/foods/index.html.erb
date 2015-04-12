@@ -24,6 +24,8 @@
     <td><%= food.quantity_produced %></td>
     <td><%= food.quantity_consumed %></td>
      <td><%= food.sustainability %></td>
+          <td><%= food.country %></td>
+
     <td><%= link_to 'Show', food %></td>
     <td><%= link_to 'Edit', edit_food_path(food) %></td>
     <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>

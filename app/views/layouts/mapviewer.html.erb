@@ -35,10 +35,17 @@
 
 
      var data = google.visualization.arrayToDataTable(<%= raw @foods %>);
-  
+   
 
-     var options = {};
+       var options = {
+           colorAxis: {minValue: 0, maxValue: 1, colors: ['#e31b23', '#00853f']},
+          
+          backgroundColor: '#81d4fa',
+          datalessRegionColor: 'pink'
 
+        };
+
+ 
      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
      chart.draw(data, options);
