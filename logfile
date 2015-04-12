@@ -1,0 +1,46 @@
+LOG:  database system was shut down at 2015-04-05 22:13:38 CLST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2015-04-11 13:40:16 CLST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+FATAL:  database "foodimpact" does not exist
+ERROR:  relation "foods" does not exist at character 315
+STATEMENT:              SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+	              FROM pg_attribute a LEFT JOIN pg_attrdef d
+	                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	             WHERE a.attrelid = '"foods"'::regclass
+	               AND a.attnum > 0 AND NOT a.attisdropped
+	             ORDER BY a.attnum
+	
+ERROR:  relation "foods" does not exist at character 315
+STATEMENT:              SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+	              FROM pg_attribute a LEFT JOIN pg_attrdef d
+	                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	             WHERE a.attrelid = '"foods"'::regclass
+	               AND a.attnum > 0 AND NOT a.attisdropped
+	             ORDER BY a.attnum
+	
+ERROR:  cached plan must not change result type
+STATEMENT:  SELECT  "foods".* FROM "foods"  WHERE "foods"."id" = $1 LIMIT 1
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2015-04-11 19:23:22 CLST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started

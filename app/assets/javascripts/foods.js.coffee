@@ -10,6 +10,8 @@ jQuery ->
 
   citycountry = $("#food_address").val().split(", ") 
  
+  citycountry.replace RegExp(" ", "g"), ""
+
   if citycountry.length > 2
    country = citycountry[2]
    $("#food_country").val( country )

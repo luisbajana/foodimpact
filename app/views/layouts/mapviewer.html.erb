@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>map viewer food Impact</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['geochart']}]}"></script>
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+  <%= yield %>
+
+
+
+  <script>
+
+
+   google.setOnLoadCallback(drawRegionsMap);
+
+   function drawRegionsMap() {
+
+
+     var data = google.visualization.arrayToDataTable(<%= raw @foods %>);
+   
+
+       var options = {
+           colorAxis: {minValue: 0, maxValue: 1, colors: ['#e31b23', '#00853f']},
+          
+          backgroundColor: '#81d4fa',
+          datalessRegionColor: 'pink'
+
+        };
+
+ 
+     var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+     chart.draw(data, options);
+   }
+
+
+
+ </script>
+</body>
+</html>
