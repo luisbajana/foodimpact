@@ -3,18 +3,39 @@ class MapviewerController < ApplicationController
 
   def index
 
-   @foods = Food.all
-   
-   @foods_array =  []
-   @foods_array << ['Country', 'Popularity']
+
+  q="trigo"
+
+
+ 
+ 
+   @foods = Food.where(:name => q).group(:country).sum(:sustainability).to_a
+
+   @foods.unshift(["country","sustainability"])
 
 
    
-   @foods.each do |food|
-    @foods_array << [food.name,food.sustainability.to_i]
-  end
+
+ 
+
+
+  # @foods.each do |food|
+
+  #   if food.name == q    
+  #       @arr_countries.push(food.country,food.sustainability.to_i)    
+  #   end
+
+  # end
+   
+   
+
+
+ render layout: "mapviewer"
+
+
+end
+
   
 
-  render layout: "mapviewer"
-end
+
 end

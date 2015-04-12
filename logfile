@@ -35,3 +35,12 @@ STATEMENT:              SELECT a.attname, format_type(a.atttypid, a.atttypmod),
 	               AND a.attnum > 0 AND NOT a.attisdropped
 	             ORDER BY a.attnum
 	
+ERROR:  cached plan must not change result type
+STATEMENT:  SELECT  "foods".* FROM "foods"  WHERE "foods"."id" = $1 LIMIT 1
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2015-04-11 19:23:22 CLST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
