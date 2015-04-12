@@ -1,5 +1,8 @@
 Foodimpact::Application.routes.draw do
 
+  resources :countries
+
+
   get "mapviewer/index"
 
   resources :foods

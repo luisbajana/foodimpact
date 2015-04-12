@@ -36,7 +36,7 @@
 
  <div class="form-group">
     <%= f.label :country %><br />
-    <%= f.text_field :country, :class=>"form-control" %>
+    <%= f.select :country, options_from_collection_for_select(Country.all, "code", "name"),{},{:class=>"form-control"} %>
   </div>
 
   
