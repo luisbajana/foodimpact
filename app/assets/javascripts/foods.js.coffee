@@ -8,7 +8,7 @@ jQuery ->
  $("#food_quantity_consumed").click ->
 
 
-  citycountry = $("#food_address").val().split(",") 
+  citycountry = $("#food_address").val().split(", ") 
  
   if citycountry.length > 2
    country = citycountry[2]
